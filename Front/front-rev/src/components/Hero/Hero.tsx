@@ -29,30 +29,43 @@
 // export default Hero
 
 
+
+// Best way to use shrinking
+
 import bgImg from "../../images/builder2.png";
 import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="relative w-full flex justify-center items-center pt-20 lg:pt-32">
+    <section className="relative w-full flex justify-center items-end max-lg:min-h-[50vw] lg:h-[80.5vh] max-lg:items-end  z-[2] pt-0 lg:pt-0">
 
-      {/* IMAGE (controls height of section) */}
-      <div className="relative w-[70%] max-w-[900px]">
-        <Image
-          src={bgImg}
-          alt="fitness"
-          className="w-full h-auto object-contain"
-          priority
-        />
+      {/* IMAGE WRAPPER */}
 
-        {/* TEXT OVER IMAGE */}
-        <div className="absolute inset-0 flex items-center justify-center text-center">
-          <h1 className="text-white/60 font-bold tracking-wider text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-            ELEVATE YOUR{" "}
-            <span className="block lg:pl-20">FITNESS FOR</span>
-            <span className="block lg:pr-20">HEALTH N VITALITY</span>
+
+      {/* max-sm:w-[90%] */}
+
+      <div className="relative w-[70%]  max-w-[1000px] lg:h-[60.5vh] flex justify-center   items-center">
+        {/* max-sm:w-[55%]  */}
+        <div className="relative w-[65%] lg:w-[75%] h-[65%]  lg:h-full">
+          <Image
+            src={bgImg}
+            alt="fitness"
+            className="w-full h-full object-contain"
+            priority
+          />
+        </div>
+
+        {/* TEXT OVER IMAGE  max-sm:top-1*/}
+        <div className="absolute top-5 z-[-1]  max-[500px]:w-[43vh] max-[370px]:w-auto text-center">
+          <h1 className="text-6xl tracking-wider font-bold max-2xl:text-5xl max-lg:text-4xl max-md:text-3xl max-sm:text-[22px] max-[390px]:text-[18px]! text-white/50 ">
+            ELEVATE YOUR
+            <span className="pl-20 max-lg:pl-15 max-sm:pl-7">FITNESS FOR</span>
+            <br />
+            <span className="pr-20 max-lg:pr-15 max-sm:pr-7">HEALTH N </span>
+            VITALITY
           </h1>
         </div>
+
       </div>
 
     </section>
@@ -60,3 +73,7 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
+
