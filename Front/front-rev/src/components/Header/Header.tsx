@@ -1,5 +1,9 @@
+
+'use client'
+import Link from "next/link";
 import { useState } from "react";
 import { HiMenu } from "react-icons/hi";
+
 
 const Header = () => {
 
@@ -7,15 +11,15 @@ const Header = () => {
 
     return (
         <>
-            <div className="flex justify-between py-10 max-lg:py-7.5 max-xl:px-20 max-lg:px-5 px-40">
+            <div className="flex justify-between py-10 max-lg:py-7.5 max-xl:px-20 max-lg:px-5 px-40 bg-[url('../images/bg.jpg')] bg-no-repeat bg-top bg-cover">
                 <div>
                     {/* ♀d☼£◄↕►‼↕◄♫/:;K╖║┤╢↨╣╡┤- */}
                     <h1 className="text-4xl max-lg:text-3xl text-white flex items-center">F<span className="text-3xl text-[#991B1B]">║</span>TNESS</h1>
                 </div>
                 <div className="flex justify-between items-center gap-20 max-lg:hidden">
                     <ul className="flex gap-10 font-semibold  text-[#fff] text-[17px]">
-                        <li className="hover:text-[#8c8c8c] cursor-pointer transition duration-300 ">Home</li>
-                        <li className="hover:text-[#8c8c8c] cursor-pointer transition duration-300">Program</li>
+                        <Link href={'/'}><li className="hover:text-[#8c8c8c] cursor-pointer transition duration-300 ">Home</li></Link>
+                        <Link href={'/workout'}><li className="hover:text-[#8c8c8c] cursor-pointer transition duration-300">Program</li></Link>
                         <li className="hover:text-[#8c8c8c] cursor-pointer transition duration-300">Pricing</li>
                         <li className="hover:text-[#8c8c8c] cursor-pointer transition duration-300">Contact</li>
                     </ul>
@@ -30,7 +34,7 @@ const Header = () => {
 
 
             </div>
-            
+
             <div
                 className={`
                     min-lg:hidden

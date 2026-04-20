@@ -22,7 +22,7 @@ const Carousel = () => {
     };
 
     return (
-        <div className='bg-[#0b0803]'>
+        <div className='bg-[#0a0a0a]'>
             <div className='flex justify-between px-40 max-xl:px-20 max-lg:px-7.5 pt-20 pb-15 max-xl:pb-10 max-lg:pb-5'>
                 <h1 className='text-[#fff] font-semibold max-lg:text-3xl text-4xl'>Explore Our Program</h1>
                 <div className='flex gap-5'>
